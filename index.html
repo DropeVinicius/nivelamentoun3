@@ -1,0 +1,2620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Nivelamento - Língua Portuguesa Nível 1 - Unidade 3</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/f_auto,q_auto/v1733243815/ImagemBG-8_wxd0x5.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Estilo do ícone de citação */
+        .quote-icon {
+            font-size: 40px; /* Tamanho do ícone */
+            color: #015A42; /* Cor do ícone */
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+            flex-shrink: 0; /* Garante que o ícone não diminua */
+        }
+
+        /* Container do parágrafo com ícone */
+        .quote-paragraph {
+            display: flex; /* Alinha o ícone e o texto lado a lado */
+            align-items: flex-start; /* Alinha verticalmente ao topo */
+            margin-top: 30px auto; /* Espaço superior */
+            width: 100%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Parágrafo do conteúdo */
+        .quote-paragraph p {
+            font-size: 16px; /* Tamanho do texto */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            flex: 1; /* Faz o parágrafo ocupar o espaço restante */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .quote-paragraph {
+                flex-direction: row; /* Mantém ícone e texto lado a lado */
+                align-items: flex-start; /* Alinha ícone ao topo do texto */
+                text-align: justify; /* Garante alinhamento justificado no texto */
+            }
+
+            .quote-icon {
+                font-size: 35px;
+                margin-right: 10px; /* Remove margem lateral */
+            }
+
+            .quote-paragraph p {
+                font-size: 14px; /* Reduz o tamanho do texto */
+                line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+            }
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao1 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao1 p {
+                font-size: 1.2rem;
+            } 
+        }
+                            /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9F43BE;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #9F43BE;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-content p {
+            margin: 10px;
+            font-size: 16px
+        }
+
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+        .text-red {
+            color: red; /* Define a cor do texto como vermelho */
+            font-weight: bold; /* Opcional: deixa o texto em negrito para destaque */
+            display: inline; /* Garante que o span seja tratado como texto inline */
+            
+        }
+        .text-right {
+            float: right; /* Alinha o texto à direita */
+            text-align: right; /* Garante que o conteúdo interno também esteja alinhado à direita */
+            font-size: inherit; /* Herda o tamanho da fonte do parágrafo */
+            font-family: inherit; /* Herda a fonte do parágrafo */
+            color: inherit; /* Herda a cor do parágrafo */
+        }
+        .text-green {
+            color: #015A42;
+        }
+        .small-frame {
+                border: 2px solid #9F43BE; /* Cor verde */
+                border-radius: 5px;
+                padding: 10px; /* Espaçamento interno reduzido */
+                margin-top: 20px; /* Espaçamento superior */
+                width: 60%; /* Largura menor para destacar como um quadro pequeno */
+                max-width: 500px; /* Largura máxima */
+                background-color: #FFF;
+                height: auto;
+        }
+
+        .small-frame p {
+                font-size: 15px; /* Fonte menor */
+                font-family: 'Roboto', sans-serif;
+                color: #000;
+                line-height: 1.6; /* Espaçamento entre linhas */
+                text-align: justify;
+                
+        }
+
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frame {
+                width: 80%; /* Ajuste a largura em telas menores */
+            }
+
+            .small-frame p {
+                font-size: 12px; /* Reduz o tamanho da fonte */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frame {
+                width: 90%; /* Largura total em telas muito pequenas */
+            }
+
+            .small-frame p {
+                font-size: 11px; /* Fonte ainda menor */
+            }
+        }
+        
+
+        .small-framev {
+                border: 2px solid #015A42; /* Cor verde */
+                border-radius: 10px;
+                padding: 20px; /* Espaçamento interno reduzido */
+                margin-top: 20px; /* Espaçamento superior */
+                margin: 10px auto; /* Espaçamento superior e inferior reduzidos */
+                width: 70%; /* Largura menor para destacar como um quadro pequeno */
+                max-width: 800px; /* Largura máxima reduzida */
+                background-color: #FFF;
+                height: auto;
+        }
+
+        .small-framev p {
+                font-size: 16px; /* Fonte menor */
+                font-family: 'Roboto', sans-serif;
+                color: #000;
+                line-height: 1.6; /* Espaçamento entre linhas */
+                text-align: justify;
+                margin: 0;      
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .small-framev {
+                width: 80%; /* Ajuste a largura em telas menores */
+            }
+
+            .small-framev p {
+                font-size: 12px; /* Reduz o tamanho da fonte */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-framev {
+                width: 90%; /* Largura total em telas muito pequenas */
+            }
+
+            .small-framev p {
+                font-size: 11px; /* Fonte ainda menor */
+            }
+        }
+
+        /* Quadro com borda violeta */
+        .quadrov {
+            border: 2px solid #015A42; /* Borda violeta */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            background-color: #fff; /* Fundo branco */
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Largura máxima */
+            margin-bottom: 30px; /* Espaçamento inferior */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-bottom: 5px;
+        }
+        /* Contêiner para alinhar as imagens lado a lado */
+        .imagem-container {
+            display: flex; /* Ativa o flexbox */
+            justify-content: space-between; /* Espaçamento uniforme entre as imagens */
+            align-items: center; /* Centraliza verticalmente */
+            gap: 20px; /* Espaçamento entre as imagens */
+        }
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 45%; /* Ajusta a largura das imagens para caberem lado a lado */
+            max-width: none; /* Remove o limite de largura */
+            height: auto; /* Mantém a proporção */
+        }
+                /* Container da imagem */
+        .image-containertable {
+        border-radius: 5px; /* Bordas arredondadas */
+        display: inline-block; /* Garante que o container se ajuste ao conteúdo */
+        background-color: white; /* Fundo branco dentro do container */
+        max-width: 800px; /* Tamanho máximo do container */
+        max-height: auto; /* Tamanho máximo do container */
+        overflow: hidden; /* Esconde o excesso de imagem se necessário */
+        }
+
+        /* Imagem dentro do container */
+        .image-containertable img {
+        width: 100%; /* Ajusta a largura da imagem ao container */
+        height: auto; /* Mantém a proporção original */
+        display: block; /* Remove espaçamento indesejado abaixo da imagem */
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadrov {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+            .separador {
+                margin: 0 40px; /* Espaço horizontal ao redor do hífen */
+                color: #333; /* Cor do hífen */
+                font-weight: bold; /* Opcional: destaque no hífen */
+        }
+        .fonte-menor {
+            font-size: 15px; /* Tamanho menor */
+            font-style: italic; /* Opcional: estilização adicional */
+            color: #000; /* Opcional: cor mais discreta */
+        }
+        /* Quadro com borda violeta */
+        .quadro {
+            border: 2px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            background-color: #fff; /* Fundo branco */
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Largura máxima */
+            margin-bottom: -10px; /* Espaçamento inferior */
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadro {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-bottom: 15px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadro {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        .quadro p{
+            font-size: 17px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: -10px;
+            text-align: justify;
+        }
+        /* Fonte da imagem */
+        .fonte-quadro {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadro {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadro {
+                padding: 15px;
+            }
+
+            .titulo-quadro {
+                font-size: 20px;
+            }
+
+            .fonte-quadro,
+            .descricao-quadro {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadro {
+                padding: 10px;
+            }
+
+            .titulo-quadro {
+                font-size: 18px;
+            }
+
+            .fonte-quadro,
+            .descricao-quadro {
+                font-size: 12px;
+            }
+        }
+        /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao2 p {
+                font-size: 1.2rem;
+            } 
+        }
+            .poet-frame {
+                border: 2px solid #015A42; /* Cor verde */
+                padding: 20px; /* Espaçamento interno reduzido */
+                margin-top: 10px; /* Espaçamento superior */
+                width: 90%; /* Largura relativa */
+                max-width: 800px; /* Largura máxima */
+                box-sizing: border-box; /* Inclui bordas no cálculo de largura */
+                margin-bottom: 10px;
+        }
+
+        .poet-frame p {
+                font-size: 15px; /* Tamanho reduzido */
+                font-family: 'Roboto', sans-serif;
+                color: #333;
+                line-height: 1.6; /* Melhor espaçamento entre linhas */
+                text-align: justify;
+                white-space: pre-line; /* Respeita as quebras de linha */
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .poet-frame p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .poet-frame p {
+                font-size: 12px;
+            }
+        }
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 40px 20px; /* Ajuste para telas menores */
+            box-sizing: border-box;
+            white-space: normal; /* Permite quebra de linha */
+            word-wrap: break-word; /* Quebra palavras longas */
+            overflow-wrap: break-word; /* Alternativa */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* Ajuste para responsividade */
+    @media (max-width: 768px) {
+        .slider-container {
+            width: 95%;
+        }
+
+        .slide {
+            font-size: 16px; /* Reduz o tamanho do texto */
+            padding: 30px 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .slider-container {
+            width: 100%;
+        }
+
+        .slide {
+            font-size: 14px;
+            padding: 20px;
+        }
+    }
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9F43BE; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #7c34a1; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 100px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: -15px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        /* Tabs container */
+        .tabs-container2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: calc(90% - 10px); /* Subtrai o gap total da largura */
+            max-width: 800px; /* Limite máximo */
+            font-weight: bold;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 5px;
+            box-sizing: border-box; /* Garante que padding e largura sejam incluídos no cálculo */
+        }
+
+        .tab2{
+            flex-grow: 1;  /* Impede que as abas cresçam para ocupar todo o espaço */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o conteúdo e o ícone */
+            justify-content: space-between; /* Texto à esquerda e ícone à direita */
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Para suavizar as bordas dos Tabs */
+            background-color: #015A42; /* Cor de fundo violeta para os tabs */
+        }
+                /* Ajustes do ícone no tab */
+        /* Ícone no final do Tab */
+        .icon-wrapper {
+            margin-left: auto; /* Garante que o ícone vá para o fim do tab */
+        }
+
+        .tab2 i {
+            font-size: 18px;
+            color: #ffffff; /* Cor padrão do ícone */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .tab2:hover i {
+            color: #04fcba; /* Altera a cor no hover */ 
+            transform: scale(1.2); /* Amplia o ícone no hover */
+        }
+        @media (max-width: 480px) {
+            .tab2 i {
+                font-size: 16px; /* Ícone menor para mobile */
+            }
+        }
+        .tab2:hover {
+            background-color: #015A42; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o conteúdo dos Tabs */ 
+        .tab-content2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            background-color: #FFF;
+            display: none; /* Inicialmente escondido */
+            box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura */
+            width: 90%; /* Consistência com outras seções */
+            max-width: 800px; /* Limite máximo */
+            margin-left: auto; /* Centraliza horizontalmente */
+            margin-right: auto; /* Centraliza horizontalmente */
+            height: auto;
+        }
+
+        /* Tab ativo */
+        .tab2.active {
+            background-color: #015a4283; /* Cor mais escura para indicar o ativo */
+            color: #FFFFFF; /* Mantém o texto em branco */
+            font-weight: bold; /* Destaca o texto */
+        }
+        /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 90%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */            
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+        }
+                .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 14px;
+            }
+        }
+            .text-strike {
+                text-decoration: line-through;
+                color: red;
+        }
+        /* Container dos novos accordions */
+        .accordion-container-diferente {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo do accordion */
+        .accordion-diferente {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        /* Cabeçalho do accordion */
+        .accordion-header-diferente {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            cursor: pointer;
+            background-color: #015A42; /* Cor de fundo exclusiva */
+            color: #fff; /* Cor do texto */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Ícone no cabeçalho */
+        .accordion-icon-diferente {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Transição para rotação */
+        }
+
+        /* Conteúdo do accordion */
+        .accordion-content-diferente {
+            display: none;
+            padding-top: 0;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            background-color: #FFF; /* Fundo mais claro */
+            border: 2px solid #015A42; /* Cor da borda combinando */
+            border-radius: 0 0 10px 10px; /* Apenas cantos inferiores arredondados */
+        }
+
+        .accordion-content-diferente p {
+            margin: 20px;
+            max-width: 800px;
+            font-size: 16px;
+        }
+        @media (max-width: 480px) {
+        .accordion-content-diferente p {
+            font-size: 16px;
+            margin: 10px;
+            }
+        }
+
+        /* Rotação do ícone */
+        .accordion-header-diferente.active .accordion-icon-diferente {
+            transform: rotate(180deg);
+        }
+                /* Contêiner dos flip cards */
+        .flip-card-container {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os cards */
+            justify-content: center;
+            padding: 10px;
+        }
+
+        /* Estilo geral do flip card */
+        .flip-card {
+            width: 150px;
+            height: 150px;
+            perspective: 1000px; /* Adiciona a perspectiva 3D */
+            margin: 10px;
+        }
+
+        /* Parte interna do flip card */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        /* Front e Back dos cards */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Face da frente */
+        .flip-card-front {
+            background-color: #9F43BE;
+            color: white;
+        }
+
+        /* Face de trás */
+        .flip-card-back {
+            background-color: white;
+            color: #9F43BE;
+            transform: rotateY(180deg);
+            font-size: 14px;
+        }
+
+        /* Efeito de rotação ao passar o mouse */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        @media (max-width: 768px) {
+    .flip-card-container {
+        flex-wrap: wrap; /* Permite que os cards quebrem linha */
+        justify-content: center; /* Centraliza os itens */
+        gap: 15px; /* Aumenta o espaçamento entre os cards */
+    }
+
+    .flip-card {
+        width: 120px; /* Reduz a largura do card */
+        height: 120px; /* Reduz a altura do card */
+        margin: 5px; /* Ajusta as margens */
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        font-size: 12px; /* Reduz o tamanho do texto */
+        padding: 8px; /* Ajusta o espaçamento interno */
+    }
+}
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #9F43BE; /* Fundo neutro */
+            border-top: 5px solid #600180;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #9F43BE; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #FFF;
+            margin-bottom: 15px;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 35px; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao2">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 1</h1>
+            <h2 class="subtitulo-professor">PROFª VALERIA SILVA ROSA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 3 | PONTUAÇÃO</h1>
+        </div>
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <!-- parágrafo com citação -->
+                <div class="quote-paragraph">
+                    <p><span class="text-right"><span class="fonte-menor">“Longo é o caminho do ensino por meio de teorias; breve e eficaz, por meio de exemplos”. - Séneca</span></span></p>
+                </div>
+                <p>Olá estudante!</p>
+                <p>Os sinais de pontuação servem, na linguagem falada, para representar pausas, expressividade e
+                entonações na voz a fim de exprimir nossas diversas emoções. Na linguagem escrita, eles contribuem
+                para dar coesão e coerência ao texto para uma boa escrita. No entanto, cada um desses sinais apresenta
+                suas particularidades.</p>
+                <p>Você já se perguntou qual a diferença entre coesão e coerência? Para melhor esclarecer, no geral, a
+                <strong>coesão</strong> foca questões gramaticais, ligações corretas entre palavras e frases, interligando as várias e
+                diferentes partes de um texto. A <strong>coerência</strong> é responsável por estabelecer a ligação lógica entre as ideias
+                e é essencial para que o texto faça sentido ao leitor. As duas são mecanismos fundamentais para uma
+                boa produção e compreensão textual e, os <strong>sinais de pontuação</strong> ajudam, e muito, essas propriedades
+                necessárias ao texto.</p>
+                <p>Dentre as finalidades dos sinais de pontuação, o gramático Domingos Paschoal Cegalla destaca três:</p>
+                <p><strong>(1)</strong> assinalar as pausas e as inflexões da voz (a entonação) na leitura;<br>
+                <strong>(2)</strong> separar palavras, expressões e orações que devem ser destacadas e<br>
+                <strong>(3)</strong> esclarecer o sentido da frase, afastando qualquer ambiguidade.</p>
+                <p>Não se esqueça, sempre que mencionamos os sinais de pontuação, é necessário relembrarmos as
+                diferenças existentes entre a fala e a escrita. Não podemos definir as regras de pontuação como sendo
+                absolutas, principalmente na linguagem escrita, por não serem uniformes entre os escritores de Língua
+                Portuguesa. Todavia, procuraremos mostrar algumas regras mais usadas para esclarecer o sentido não
+                só de uma frase e/ou período, mas também de um texto.
+                Vamos explorar algumas regras e usos frequentes para que você possa compreender como elas ajudam
+                a organizar e dar sentido ao texto?</p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+    <!-- Título da seção -->
+    <h1>1. VÍRGULA</h1>
+    
+    <!-- Parágrafos -->
+    <p>A vírgula é o sinal de pontuação mais usado. Ela indica uma pausa breve e tem a finalidade de organizar
+    as ideias e facilitar o entendimento ao lermos um texto. No entanto, uma vírgula usada inadequadamente
+    pode alterar o sentido do texto escrito e a leitura em voz alta. Emprega-se a vírgula para separar:</p>
+    <!-- Acordeons -->
+    <div class="acordeon-container">
+        <!-- Primeiro acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                1. NOMES PRÓPRIOS DE LUGAR SEGUIDOS DE DATA
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+    
+            <div class="acordeon-content">
+                <p>▸ Brasília, 31 de março de 2019.</p>
+            </div>
+        </div>
+    
+        <!-- Segundo acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                2. APOSTOS E VOCATIVOS
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ Osvaldo, o melhor professor do colégio, foi morar na Inglaterra.</p>
+                <p>▸ Menina, venha cá!</p>
+            
+            </div>
+        </div>
+        <!-- Terceiro acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                3. ADJUNTOS ADVERBIAIS
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ Às vezes, a peça daquele teatro termina muito tarde.</p>
+                <p>▸ Enviarei, nos próximos dias, a mercadoria solicitada.</p>
+            </div>
+        </div>
+        <!-- Quarto acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                4. ORAÇÕES SUBORDINADAS ADVERBIAIS, INCLUSIVE AS REDUZIDAS
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ Conforme combinamos, jogaremos pôquer amanhã à noite.</p>
+                <p>▸ Viajaremos todos hoje às 19h00, caso ela não se atrase.</p>
+            </div>
+        </div>
+        <!-- Quinto acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                5. ORAÇÕES ADJETIVAS EXPLICATIVAS
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ O diretor, que é o responsável pelo cumprimento das normas, tem-se mostrado muito
+                competente.</p>
+            </div>
+        </div>
+        <!-- Sexto acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                6. ORAÇÕES INTERCALADAS
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ O vestibular, afirmou o Sr. Ministro, é essencial para o ingresso no Ensino Superior.</p>
+            </div>
+        </div>
+        <!-- Sétimo acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                7. CONJUNÇÕES COORDENADAS *ADVERSATIVAS E **EXPLICATIVAS
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ Ontem houve futebol, *porém amanhã não haverá.</p>
+                <p>▸ Não esperem por mim para irem jantar, **pois ainda estou trabalhando.</p>
+            </div>
+        </div>
+        <!-- Oitavo acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                8. EXPRESSÕES EXPLICATIVAS
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ João estudou todo o conteúdo programático de História, ou seja, 08 capítulos.</p>
+                <p>▸ Amanhã, ou melhor, depois de amanhã, faremos um churrasco em comemoração ao
+                aniversário de minha mãe.</p>
+                <p>▸ Pedro tirou a nota máxima na prova de História, isto é, acertou as 10 perguntas.</p>
+            </div>
+        </div>
+        <!-- Nono acordeon -->
+        <div class="acordeon">
+            <div class="acordeon-header">
+                9. ENUMERAÇÕES DE *VÁRIOS TERMOS OU **ORAÇÕES
+                <i class="bx bx-chevron-down acordeon-icon"></i>
+            </div>
+            <div class="acordeon-content">
+                <p>▸ *O jogador, o técnico, o diretor, todos ficaram assustados com o resultado do jogo.</p>
+                <p>▸ Ele **chegou, sentou, respondeu à chamada e saiu.</p>
+            </div>
+        </div>
+    </div>
+    <p>Não devemos usar a vírgula para separar o sujeito do verbo.</p>
+    <div class="small-frame">
+        <p><span class="text-red">Forma errada:</span> Todos os alunos, compareceram na conferência.</p>
+        <p><strong><span class="text-green">Forma correta:</strong></span> Todos os alunos compareceram na conferência.</p>
+    </div>
+    <p>Verifique também como a <strong>vírgula</strong> pode <strong>alterar</strong> o sentido da frase!!!</p><br>
+    <!-- Quadro com borda violeta -->
+    <h2 class="titulo-quadrov"><span class="text-green">Figura 1.</span> Falta de vírgula... Que confusão!</h2><br>
+    <div class="quadrov">
+        <!-- Imagem via link -->
+        <div class="imagem-container">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737398597/Figura_a.1_vkozg9.png"
+            alt="Descrição da imagem" class="imagem-quadrov">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737398598/Figura_b.1_ih2eu0.png" alt="Descrição da imagem"
+                class="imagem-quadrov">
+        </div>
+        <!-- Fonte da imagem -->
+        <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte</strong>: Adaptado de https://br.pinterest.com</span></p>
+        <!-- Descrição da imagem -->
+        <p class="descricao-quadrov"><span class="fonte-menor"><strong>Descrição da imagem</strong>: A figura apresenta duas imagens lado a lado. A imagem (a) mostra uma captura de tela
+        de uma mensagem de celular com o texto: "Filha, esqueci de te falar. Não beba só suco". A imagem (b) é uma
+        ilustração humorística. Na parte superior, está escrito: "Vou ali comer gente.". Abaixo, um esqueleto estilizado
+        aparece segurando um garfo, representando o sentido literal da frase sem a vírgula. Na parte inferior, aparece a
+        explicação: "E por causa de uma vírgula, você vira canibal...".</span></p>
+    </div>
+    <div class="image-containertable">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737575984/Imagemtabela_t8xqmp.png" alt="Descrição da Imagem" />
+    </div>
+    <!-- Fonte da imagem -->
+    <p class="fonte-quadro"><span class="fonte-menor"><strong>Fonte</strong>: Adaptado de Associação Brasileira de Imprensa http://realidadeasavessas.blogspot.com/2014/12/o-homem-que-morreu-devido-uma-virgula.html </span></p>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>2. PONTO E VÍRGULA</h1>
+        <p>
+            Esse sinal de pontuação intermediário entre o PONTO FINAL e a VÍRGULA, denota uma pausa maior que
+            a vírgula e menor que o ponto final. O ponto e vírgula é, essencialmente, NUMERADOR.
+            O uso do ponto e vírgula apresenta diversas funções importantes na escrita. Ele é empregado, por exemplo,
+            para separar orações da mesma natureza que possuem certa extensão. É o caso da frase:
+        </p>
+        <div class="small-framev">
+            <p><span class="fonte-menor">“Pela emoção somos nós; pela inteligência somos alheios.” (Fernando Pessoa).</span></p>
+        </div>
+        <p>Outro exemplo seria:</p>
+        <div class="small-framev">
+            <p><span class="fonte-menor">“Era hora do descanso; passeávamos, conversando.” (Raul Pompeia).</span></p>
+        </div>
+        <p>Além disso, o ponto e vírgula também serve para enumerar itens de maneira clara. Por exemplo:</p>
+        <div class="small-framev">
+            <p><span class="fonte-menor">“Preciso ir ao supermercado para comprar: arroz; feijão; açúcar; sal.”</span></p>
+        </div>
+        <p>Esse uso ajuda a organizar informações, especialmente em listas mais detalhadas.
+        Outra função importante é separar estruturas coordenadas, ou seja, aquelas que não dependem uma da
+        outra, mas que pertencem à mesma ideia e estão conectadas por vírgulas. Um exemplo disso pode ser
+        observado na frase:</p>
+        <div class="small-framev">
+            <p><span class="fonte-menor">“Durante o governo Lula, defendeu-se largamente a liberdade de expressão; no governo Dilma, o povo,
+            literalmente, saiu às ruas.”</span></p>
+        </div>
+        <p>Por fim, o ponto e vírgula também é muito útil ao enumerar enunciados simples relacionados a um tema.</p>
+        <div class="small-framev">
+            <p><span class="fonte-menor">“A Língua Portuguesa não é una, nem imutável. Ela está sempre se modificando devido a vários fatores que
+            determinam as diferentes variedades, entre eles:<br><br>
+            <strong>1.</strong> A região do falante;<br>
+            <strong>2.</strong> O nível social do falante;<br>
+            <strong>3.</strong> A escolaridade e sua relação com a escrita;<br>
+            <strong>4.</strong> A situação de fala.”
+        </span></p>
+        </div>
+    </section>
+    <section id="secao3" class="secao1">
+        <h1>3. DOIS PONTOS</h1>
+        <p>Os dois pontos servem para marcar uma suspensão do pensamento em uma frase não concluída.
+        Empregam-se antes de:</p><br>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide"><strong>1. Uma citação:</strong> </br></br>
+                    Assim diz o ditado: Em terra de cego, quem tem um olho é rei.
+                </div>
+                <div class="slide"><strong>2. Uma enumeração explicativa:</strong> </br></br>
+                    João prometeu ao professor levar tudo consigo: livros, cadernos e vários apontamentos.
+                </div>
+                <div class="slide"><strong>3. Uma pergunta ou uma resposta:</strong> <br><br>
+                    Perguntei-lhe: “Afinal, o que você quer?”<br>
+                    E ele respondeu: “Apenas participar de sua vitória”.
+                </div>
+                <div class="slide"><strong>4. Um esclarecimento, uma síntese ou uma consequência:</strong><br><br>
+                    Resumindo: mais da metade da classe foi aprovada.<br>
+                    Não sou alegre nem sou triste: sou poeta. (Cecília Meireles)
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Que tal revisar o conteúdo estudado até aqui e reforçar seus conhecimentos do uso
+                    da vírgula, do ponto e vírgula e dos dois pontos de forma prática e descomplicada?
+                    Assista ao vídeo e não perca essa oportunidade de aprimorar sua escrita!
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/9tdpcfdr244?si=cm0FxYTlVEtauzvN"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao3" class="secao1">
+        <h1>4. PONTO FINAL</h1>
+        <p>Indica uma pausa mais longa da voz e encerra um período de sentido completo em tom descendente:</p>
+        <div class="small-framev">
+            <p><span class="fonte-menor">
+                Além, muito além daquela serra, que ainda azula no horizonte, nasceu Iracema. (José de Alencar)
+                <br><br>
+                Contei à minha mãe a respeito do meu namorado novo, esperando seus conselhos.
+            </span></p>
+        </div>
+        <p>É usado também em abreviaturas como, Etc. , LTDA. , Ou Ltda. ,CIA. , Cia. ou Sr.</p>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>5. RETICÊNCIAS</h1>
+        <p>As reticências são amplamente utilizadas na escrita para indicar interrupção, hesitação ou continuidade de
+        um pensamento. Elas podem marcar elementos com forte carga emocional, como nos exemplos: <span class="fonte-menor">“Mara
+        ... que noiva linda!” ou “Hmmm... que cheiro bom!”</span>, expressando surpresa ou emoção.
+        Além disso, as reticências também são usadas para indicar a continuidade de uma ação ou fato que não
+        foi completamente concluído. Veja o caso: <span class="fonte-menor">“É... não foi realmente fácil convencer seu irmão a respeito da
+        mudança de datas.”</span> Esse uso sugere uma pausa reflexiva ou hesitação antes de continuar o raciocínio.
+        Outro uso importante das <strong>reticências</strong> ocorre com o <strong>auxílio de parênteses</strong> ou <strong>colchetes</strong>, para indicar cortes
+        ou supressões em um texto sem comprometer a compreensão do assunto. Essa aplicação permite ajustar o
+        conteúdo sem perda de significado, mantendo a clareza e a fluidez da comunicação. Indicam uma citação:</p>
+        <!-- Tabs -->
+        <div class="tabs-container2">
+            <div class="tab2" data-tab="tabb1">
+                NO INÍCIO
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+            <div class="tab2" data-tab="tabb2">
+                NO MEIO
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+            <div class="tab2" data-tab="tabb3">
+                NO FINAL
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+        </div>
+        <!-- Conteúdo dos Tabs -->
+        <div class="tab-content2" id="tabb1">
+            <p>Uso raro.
+            “Conforme li,
+            rapidamente,
+            (...) e as células
+            tronco na medula
+            do ser humano em
+            qualquer idade.</p>
+        </div>
+        <div class="tab-content2" id="tabb2" style="display: none;">
+            <p>“O desenvolvimento
+            humano sempre se
+            traduziu em impacto
+            à natureza (...)
+            derrubar árvores,
+            afastar certos
+            animais de seu
+            ambiente. (IstoÉ,
+            6/4/05)”</p>
+        </div>
+        <div class="tab-content2" id="tabb3" style="display: none;">
+            <p>No final de uma
+            frase ou período com
+            auxílio de parênteses
+            ou colchetes:
+            De acordo com
+            Marcuschi (2008,
+            p. 230) “todos nós
+            sabemos como
+            é importante nos
+            entendermos bem no
+            dia a dia [...]. Esse
+            não é um assunto
+            apenas escolar ou
+            acadêmico, mas
+            de nossa vivência
+            cotidiana”.”</p>
+        </div>
+    </section>
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Chegou a hora de revisar o conteúdo pertinente às reticências e quem sabe sanar
+                    alguma dúvida que tenha ficado.<br><br>
+                    <strong>Para isso, assista o vídeo a seguir:</strong>
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/kJTNSENXBgs?si=6HARzBuYBK5Vk1y7"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section id="secao3" class="secao1">
+            <h1>6. ASPAS</h1>
+            <p>As aspas representam um sinal gráfico utilizado aos pares na produção textual. Sua principal função é
+            destacar alguma parte de um texto, distinguindo-a do restante. Elas têm diversas aplicações.
+            Primeiramente, as aspas são usadas para abrir e fechar uma citação, como no exemplo:</p>
+            <div class="small-framev">
+                <p><span class="fonte-menor">“A vida não é a quantidade de respirações que cada um tem, mas sim os momentos que nos tiram o
+                fôlego.” (Filme Hitch, 2005).</span></p>
+            </div>
+            <p>Além disso, as aspas servem para destacar elementos variados, como:</p>
+            <!-- Tópico 6 -->
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸ Palavras estrangeiras,</strong> especialmente quando não há a opção de usar itálico, como em: “Ele tinha um ‘hobby’ muito caro.”</span></li>
+                    <li><span class="topico-destaque"><strong>▸ Gírias,</strong> como na frase: “Ele ‘trampa’ tanto e o salário é muito baixo. Coitado!”</span></li>
+                    <li><span class="topico-destaque"><strong>▸ Palavras ou expressões populares,</strong> como: “Mais uma vez, essa acusação vai ‘terminar em pizza’.”</span></li>
+                    <li><span class="topico-destaque"><strong>▸ Nomes de jornais e revistas,</strong> exemplificados em: “Nelson lê ‘O Estado’ todos os dias.”</span></li>
+                    <li><span class="topico-destaque"><strong>▸ Neologismos,</strong> como abreviações usadas na internet: “’vc’, ‘blz’, ‘vdd’.” Também são exemplos neologismos criados na música, como os verbos: “caetanear” e “djavanear.”</span></li>
+                    <li><span class="topico-destaque"><strong>▸ Arcaísmos,</strong> ou palavras antigas em desuso, como: “’O alcaide’ dessa cidade completa hoje 80 anos.” (alcaide significa prefeito).</span></li>
+                </ul>
+            </div>
+            <p>Outra função importante das aspas é <strong>exprimir ironia.</strong> Por exemplo: “Os alunos se comportaram ‘super’
+            bem na maratona colegial.”<br>
+            Por fim, as aspas podem ser utilizadas para <strong>delimitar o título de uma obra</strong> (embora o uso de itálico
+            também seja uma alternativa). Um exemplo clássico seria: “Dom Casmurro”, de Machado de Assis.
+            Você sabe qual é a posição correta das aspas em relação ao ponto final? Vamos descobrir juntos navegando
+            pelos cards a seguir.</p><br><br>
+            <div class="slider-container slider-container-2">
+                <i class="bx bx-chevron-left arrow left-arrow"></i>
+                <div class="slider">
+                    <div class="slide"><strong>1. Quando a citação é a continuação da frase, as aspas devem vir antes do ponto.</strong></br></br>
+                        Eu realmente penso que “a vingança nunca é plena, mata a alma e a envenena”.</div>
+                    <div class="slide"><strong>2. Quando a citação é feita por inteiro e, isoladamente, as aspas vem depois do ponto.</strong></br></br>
+                        “Saber é poder.”</div>
+                    <div class="slide"><strong>3. Caso a citação termine com uma interrogação ou exclamação, o ponto de interrogação fica antes do fechamento das
+                    aspas. O ponto final, por último.</strong></br></br>
+                        Leila me questionou com ênfase: “Você realmente não gosta de mim?”.</div>
+                    <div class="slide"><strong>4. Quando citamos um longo período com várias frases e pontuações “internas”, o ponto final deve ser colocado dentro das
+                    aspas, pois fecha a citação.</strong></br></br>
+                        “No pátio da vila, Senhor Madruga, Madruguinha e Kiko dialogam […]. Madruguinha diz para Kiko que na salada a gente
+                        coloca vinagre e não cachaça.”
+                    </div>
+                </div>
+                <i class="bx bx-chevron-right arrow right-arrow"></i>
+            </div>
+            <h1>7. TRAVESSÃO</h1>
+            <p>O travessão é um traço maior que o hífen e emprega-se para:</p>
+            <!-- Acordeons -->
+            <div class="acordeon-container">
+                <!-- Primeiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        1. INDICAR A MUDANÇA DO INTERLOCUTOR OU INÍCIO DA FALA DE UMA PERSONAGEM
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+            
+                    <div class="acordeon-content">
+                        <p>▸ Para entenderes bem o que é a morte e a vida, basta contar-te como morreu minha avó.</p>
+                        <p>▸ Com foi?</p>
+                        <p>▸ Senta-te. (Machado de Assis)</p>
+                    </div>
+                </div>
+                <!-- Primeiro acordeon -->
+                <div class="acordeon">
+                    <div class="acordeon-header">
+                        2. SEPARAR EXPRESSÕES, FRASES EXPLICATIVAS OU ORAÇÕES A QUE QUEREMOS ENFATIZAR OU REALÇAR
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                
+                    <div class="acordeon-content">
+                        <p>▸ A trouxa, arrastada no chão, ia deixando pelo caminho alguns de seus pertences: o
+                        botão, o pedaço de biscoito e – saíra de casa prevenido – uma moeda de 1 cruzeiro.
+                        (Fernando Sabino)</p>
+                        <p>▸ Um bom ensino – diga-se mais uma vez – exige a valorização do professor.</p>
+                        <p>▸ “O obelisco aponta aos mortais as coisas mais altas: o céu, a Lua, o Sol, as estrelas –
+                        Deus.” (Manuel Bandeiras)</p>
+                    </div>
+                </div>
+                <p>
+                Em alguns casos, o travessão pode ser empregado para substituir os parênteses, a vírgula e os dois
+                pontos:
+                </p>
+                <div class="topico-texto">
+                    <ul>
+                        <li><span class="topico-destaque"><strong>▸ </strong>Só eles conseguem me fazer sentir melhor – meus pais. (Parênteses)</span></li>
+                        <li><span class="topico-destaque"><strong>▸ </strong>“O que o colono do Maranhão pretendia era isto – fazer entradas livres.” (Ponto e Vírgula) (Carlos de Laet)</span></li>
+                        <li><span class="topico-destaque"><strong>▸ </strong>Eis me aqui – alegre, leve e solta. (Dois pontos)</span></li>
+                    </ul>
+                </div>
+        </section>
+        <section id="secao2" class="secao2">
+            <h1>8. PARÊNTESES</h1>
+            <p>Os parênteses são sinais de pontuação que delineiam um momento intercalado no texto, onde há um
+            acréscimo de informação. A informação pode ser retirada da frase, não havendo alteração de sentido.
+            No entanto, quando presente, pode enriquecer o conteúdo da frase com informação extra, bem como
+            esclarecer melhor a ideia.<br>
+            Eles são empregados em diversas situações. Primeiramente, utilizam-se os parênteses para separar
+            palavras ou orações intercaladas com caráter explicativo. Por exemplo:</p>
+            <div class="small-framev">
+                <p><span class="fonte-menor">
+                    “Era a sua bagagem: um caminhão de madeira com apenas três rodas, um resto de biscoito, uma chave
+                    (onde diabo meteram a chave da despensa? - a mãe mais tarde irá dizer).” (Fernando Sabino).
+                </span></p>
+            </div>
+            <p>Outra aplicação dos parênteses ocorre na introdução de explicações, comentários ou reflexões. Veja:</p>
+            <div class="small-framev">
+                <p><span class="fonte-menor">
+                        “As orações subordinadas adjetivas explicativas acrescentam uma qualidade acessória ao antecedente
+                        (são separadas da oração principal por vírgulas). As restritivas restringem o significado do antecedente (não
+                        são separadas por vírgulas).”
+                    </span>
+                </p>
+            </div>
+            <p>Ou ainda:</p>
+            <div class="small-framev">
+                <p><span class="fonte-menor">
+                        “Ela disse que cumpriria o acordo do banco. (Será?)”
+                    </span>
+                </p>
+            </div>
+            <p>Os parênteses também aparecem na introdução de dados biográficos, bibliográficos ou indicações cênicas.
+            Exemplos incluem:</p>
+            <!-- Accordions -->
+            <div class="accordion-container-diferente">
+                <!-- Primeiro Accordion -->
+                <div class="accordion-diferente">
+                    <div class="accordion-header-diferente">
+                        DADOS BIOGRÁFICOS
+                        <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                    </div>
+                    <div class="accordion-content-diferente">
+                        <p>
+                            Luís António Verney (cavaleiro da Ordem de Cristo) foi o maior representante do Iluminismo
+                            português.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Segundo Accordion -->
+                <div class="accordion-diferente">
+                    <div class="accordion-header-diferente">
+                        DADOS BIBLIOGRÁFICOS
+                        <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                    </div>
+                    <div class="accordion-content-diferente">
+                        <p>
+                            O ato de escrever deve ser visto como uma atividade sociocultural. Ou dito de outra forma,
+                            escrevemos para alguém ler. (Faraco, 2003, p. 8).
+                        </p>
+                    </div>
+                </div>
+                <!-- Segundo Accordion -->
+                <div class="accordion-diferente">
+                    <div class="accordion-header-diferente">
+                        INDICAÇÕES CÊNICAS
+                        <i class="bx bx-chevron-down accordion-icon-diferente"></i>
+                    </div>
+                    <div class="accordion-content-diferente">
+                        <p>
+                            Antonio – Você vai jantar agora ou mais tarde?
+                            Melissa (entrando na cozinha) – Agora, pois tenho reunião às 8:00.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>Além disso, utilizam-se parênteses para separar orações intercaladas com verbos declarativos, como em:
+            “Eles dizem (embora ninguém acredite) que são chilenos.”<br>
+            Outro uso dos parênteses é na indicação de palavras flexionadas em gênero ou número, como em:
+            “Prezados(as) alunos(as), não deixem de fazer a rematrícula.”<br>
+            Quanto à pontuação, o posicionamento dentro ou fora dos parênteses segue regras específicas:</p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸ </strong>Se a frase completa estiver dentro dos parênteses, ela deve ser pontuada:</span></li>
+                </ul>
+            </div>
+            <p><span class="fonte-menor">“Será que conseguiremos ir à praia? (E aproveitar este belo dia de sol?)”</span></p>
+            <div class="topico-texto">
+                <ul>
+                    <li><span class="topico-destaque"><strong>▸ </strong>Se houver apenas informações menores, a pontuação aplica-se à frase principal:</span></li>
+                </ul>
+            </div>
+            <p><span class="fonte-menor">“Tenho duas irmãs: Márcia (a mais velha), que mora em São Paulo, e Mary (a mais nova), que mora em
+            Campinas.”</span></p>
+        </section>
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Aspas, travessão e parênteses: sinais que enriquecem e organizam qualquer texto!
+                    No vídeo a seguir, relembre como utilizar cada um deles de forma correta e criativa.<br><br>
+                    <strong>Vamos juntos ampliar seu domínio sobre a pontuação!</strong>
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/HwMYC5pFJGo?si=aQzQMTqXiO7dmQBo"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section id="secao3" class="secao1">
+            <h1>9. PONTO DE INTERROGAÇÃO</h1>
+            <p>
+                O ponto de interrogação é um sinal de pontuação cuja função principal é indicar perguntas ou dúvidas,
+                tanto na fala quanto na escrita. Ele é utilizado em diversas situações específicas, conforme explicado a
+                seguir.
+            </p>
+            <p>
+                Primeiramente, o ponto de interrogação é empregado ao final de palavras ou períodos que contenham
+                uma pergunta direta. Por exemplo: <span class="fonte-menor">““Por quê?”, perguntou o professor.”, “Que negócio é esse?” e “Quem
+                são aqueles homens que entraram agora?”</span>
+            </p>
+            <p>
+                Além disso, o ponto de interrogação pode ser usado em combinação com reticências para expressar
+                dúvida ou continuidade do pensamento como, por exemplo <span class="fonte-menor">“Ele chegou. O que faço agora?...”</span>
+            </p>
+            <p>
+                Outro uso comum ocorre com aspas, quando uma pergunta é inserida em discurso direto. Veja o exemplo:<br>
+                <span class="fonte-menor">“O gerente do hotel perguntou: ‘Vocês preferem apartamentos com vista para a praia ou para a piscina?’”</span>
+            </p>
+            <h1>10. PONTO DE EXCLAMAÇÃO</h1>
+            <p>
+                O ponto de exclamação é um sinal de pontuação empregado para expressar emoções intensas, como
+                surpresa, espanto, susto, indignação, piedade ou súplica. Ele é bastante versátil e pode ser utilizado em
+                diversas situações.
+            </p>
+            <p>
+                Uma das principais funções do ponto de exclamação é aparecer após interjeições, como em: <span class="fonte-menor">“Ah! Que
+                bela surpresa!”</span>
+            </p>
+            <p>
+                Ele também é usado após orações exclamativas, destacando sentimentos ou reflexões marcantes.
+                Por exemplo: <span class="fonte-menor">“Stop! A vida parou ou foi o automóvel?”</span> (Carlos Drummond de Andrade) e <span class="fonte-menor">“Que dia lindo!”</span>
+            </p>
+            <p>
+                Outra aplicação ocorre em frases imperativas, para indicar ordens, pedidos ou comandos: <span class="fonte-menor">“Pare, por
+                favor!” “Silêncio, pessoal!”</span>
+            </p>
+            <p>
+                Em situações em que se deseja enfatizar uma ideia, pode-se utilizar mais de um ponto de exclamação,
+                como em: <span class="fonte-menor">“Não acredito!!!”</span>
+            </p>
+            <p>
+                Além disso, o ponto de exclamação pode ser empregado para chamar a atenção de alguém, como
+                em: <span class="fonte-menor">“Margarida! Venha para casa. Está esfriando.”</span></p>
+            <h1>11. PONTO DE INTERROGAÇÃO E PONTO DE EXCLAMAÇÃO</h1>
+            <p>Quando uma frase é interrogativa e, ao mesmo tempo, expressa admiração ou espanto, utilizam-se o
+            ponto de interrogação e o ponto de exclamação juntos. Nesse caso, o ponto de interrogação vem primeiro,
+            seguido do ponto de exclamação.</p>
+            <p>Esse uso transmite a ideia de uma pergunta inicial, mas com um tom carregado de surpresa ou indignação.
+            Veja os exemplos:</p>
+            <div class="flip-card-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>“Nossa! Você já
+                            chegou?!”</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>A frase expressa
+                            uma pergunta
+                            direta, mas
+                            também revela
+                            espanto pelo fato
+                            de a pessoa já ter
+                            chegado.</h3>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>“Quem você
+                            pensa que é
+                            para me tratar
+                            assim?!”</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Aqui, a estrutura
+                            sugere uma
+                            pergunta, mas o
+                            tom é claramente
+                            de indignação ou
+                            reprovação.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contêiner externo para definir a cor de fundo -->
+        <section class="outer-background">
+            <!-- Seção Saiba Mais - Retângulo de Fundo -->
+            <section class="background-section">
+                <!-- Círculo Verde -->
+                <div class="circle-green">
+                    <!-- Círculo Branco com ícone -->
+                    <div class="circle-white">
+                        <i class='bx bx-book-reader'></i>
+                    </div>
+                </div>
+                <div class="transparent-section">
+                    <h1 class="learn-more-title">SAIBA MAIS</h1>
+                    <p class="learn-more-paragraph">
+                        Revise e amplie seus conhecimentos de como expressar suas ideias com precisão, emoção
+                        e clareza. Neste vídeo, o Prof. Noslen ensina sobre o ponto final, o ponto de exclamação e o
+                        ponto de interrogação. Aprenda a usar esses sinais para dar vida à sua escrita!
+                    </p>
+                    <!-- Ícone de Play -->
+                    <div class="play-icon" data-video="https://www.youtube.com/embed/ODkVN0kRciE?si=geOa1lOGiPPuLNvP"
+                        onclick="openVideoModal(this)">
+                        <i class='bx bx-play-circle'></i>
+                    </div>
+                </div>
+                <!-- Modal com o vídeo -->
+                <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                    <div class="video-content" onclick="event.stopPropagation()">
+                        <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                        <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Seção Conclusão -->
+        <section id="conclusao" class="conclusao">
+            <!-- Conteúdo -->
+            <div class="conteudo-conclusao">
+                <div class="caixa-texto">
+                    <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                    <p>A pontuação é uma ferramenta essencial para a organização e clareza da comunicação escrita. Ao
+                    longo desta unidade, exploramos como os diferentes sinais de pontuação não apenas representam pausas
+                    e entonações na escrita, mas também asseguram a coesão e a coerência textual, evitando ambiguidades
+                    e facilitando a compreensão. Da vírgula ao ponto de exclamação, cada sinal tem funções específicas que,
+                    quando bem aplicadas, enriquecem a qualidade do texto e garantem que a mensagem seja transmitida
+                    de maneira eficiente.</p>
+                    <p>Compreender e aplicar corretamente os sinais de pontuação é mais do que seguir regras gramaticais;
+                    trata-se de aprimorar a expressão de ideias e sentimentos na escrita. Ao dominar os usos de cada ponto,
+                    como os exemplos apresentados, o leitor se torna capaz de interpretar e criar textos com maior precisão,
+                    construindo um diálogo claro e envolvente com o interlocutor. Assim, a pontuação não é apenas um
+                    recurso técnico, mas um poderoso meio de conexão e expressão.</p>
+                    <p>Lembre-se: o uso correto da pontuação exige prática e atenção ao contexto. Seja para organizar ideias,
+                    evitar ambiguidades ou expressar emoções, os sinais de pontuação estão sempre presentes, ajudando
+                    a transformar textos simples em produções ricas e expressivas. Agora, que tal colocar em prática o que
+                    aprendeu? Experimente revisar textos, identificar o uso dos sinais de pontuação e aplicar as regras abordadas.
+                    Assim, você estará aprimorando suas habilidades e fortalecendo sua comunicação escrita.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Referências-->
+        <section id="referencias" class="referencias">
+            <!-- Conteúdo -->
+            <div class="conteudo-referencias">
+                <div class="caixa-texto">
+                    <h1 class="titulo-referencias">REFERÊNCIAS BIBLIOGRÁFICAS</h1>
+                    <p>ALMEIDA, Antonio Fernando de; ALMEIDA, Valéria Silva Rosa de. <strong>Português básico</strong>: gramática, redação,
+                    textos. 5. ed. São Paulo: Atlas, 2005.</p>
+                    <p>BECHARA, Evanildo. <strong>Moderna gramática portuguesa.</strong> 21. ed. São Paulo: Nacional, 1976.</p>
+                    <p>_______. <strong>A nova ortografia.</strong> Rio de Janeiro: Nova Fronteira, 2008.</p>
+                    <p>CEGALLA, Domingos Paschoal. Novíssima gramática da língua portuguesa. 48. ed. revisada. São
+                    Paulo: Companhia Editora Nacional, 2008.</p>
+                    <p>NICOLA, José de; INFANTE, Ulisses. <strong>Gramática contemporânea da língua portuguesa.</strong> 7. ed. São
+                    Paulo: Scipione, 1991.</p>
+                    <p><strong>VOCABULÁRIO ortográfico da língua portuguesa.</strong> 5. ed. São Paulo: Global, 2009.</p>
+                    <p><strong>CITAÇÕES EM TEXTOS ACADÊMICOS.</strong> Disponível em: http://ueadsl.textolivre.pro.br/arquivos/
+                    sobreEscrita/citacoes_em_textos_academicos.html. Acesso em: 2021</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Copyright © de Universidade São Francisco</p>
+            <hr class="footer-divider">
+            <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+                qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+                gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+                expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+        </footer>
+    <script>
+        // Script para funcionalidade do acordeon
+            document.querySelectorAll('.acordeon-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isVisible = content.style.display === 'block';
+
+                    // Apenas abre ou fecha o acordeon clicado
+                    content.style.display = isVisible ? 'none' : 'block';
+
+                    // Alternar a classe da seta
+                    const icon = header.querySelector('.acordeon-icon');
+                    if (icon) {
+                        icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                        icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                    }
+                });
+            });
+            // Script para funcionalidade do novo accordion
+            document.querySelectorAll('.accordion-header-diferente').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isVisible = content.style.display === 'block';
+
+                    // Apenas abre ou fecha o accordion clicado
+                    content.style.display = isVisible ? 'none' : 'block';
+
+                    // Alternar a classe da seta
+                    const icon = header.querySelector('.accordion-icon-diferente');
+                    if (icon) {
+                        icon.classList.toggle('bx-chevron-up', !isVisible); // Seta para cima
+                        icon.classList.toggle('bx-chevron-down', isVisible); // Seta para baixo
+                    }
+                });
+            });
+            function initializeSlider(sliderSelector) {
+                    const sliderContainer = document.querySelector(sliderSelector);
+                    const slider = sliderContainer.querySelector('.slider');
+                    const slides = sliderContainer.querySelectorAll('.slide');
+                    const leftArrow = sliderContainer.querySelector('.left-arrow');
+                    const rightArrow = sliderContainer.querySelector('.right-arrow');
+                    let currentIndex = 0;
+
+                    function showSlide(index) {
+                        const totalSlides = slides.length;
+
+                        if (index < 0) {
+                            currentIndex = totalSlides - 1;
+                        } else if (index >= totalSlides) {
+                            currentIndex = 0;
+                        } else {
+                            currentIndex = index;
+                        }
+
+                        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    }
+
+                    leftArrow.addEventListener('click', () => showSlide(currentIndex - 1));
+                    rightArrow.addEventListener('click', () => showSlide(currentIndex + 1));
+
+                    // Inicializa o slider
+                    showSlide(currentIndex);
+                }
+
+                // Exemplo de inicialização de sliders
+                initializeSlider('.slider-container'); // Slider 1
+                initializeSlider('.slider-container-2'); // Slider 2   
+                // Função para abrir o modal com o vídeo
+                    function openVideoModal(element) {
+                        var videoModal = document.getElementById('videoModal');
+                        var iframe = document.getElementById('videoIframe');
+
+                        // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                        var videoLink = element.getAttribute("data-video");
+
+                        // Define o src do iframe com o link do vídeo
+                        iframe.src = videoLink;
+
+                        // Exibe o modal
+                        videoModal.style.display = "flex";
+                    }
+
+                    // Função para fechar o modal
+                    function closeVideoModal() {
+                        var videoModal = document.getElementById('videoModal');
+                        var iframe = document.getElementById('videoIframe');
+
+                        // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                        iframe.src = "";
+                        videoModal.style.display = "none";  // Fecha o modal
+                    }
+
+                    // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+                    document.getElementById('videoModal').addEventListener('click', function (event) {
+                        // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                        if (event.target === this) {
+                            closeVideoModal();
+                        }
+                    });
+                // Script para funcionalidade dos Tabs da nova seção (tabs-container2)
+                    document.querySelectorAll('.tab2').forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            const targetId = tab.getAttribute('data-tab');
+
+                            // Remove o conteúdo visível de todos os Tabs dentro da nova seção
+                            document.querySelectorAll('.tab-content2').forEach(content => {
+                                content.style.display = 'none';
+                            });
+
+                            // Mostra o conteúdo do Tab clicado
+                            document.getElementById(targetId).style.display = 'block';
+
+                            // Remove a classe 'active' de todos os Tabs dentro da nova seção
+                            document.querySelectorAll('.tab2').forEach(t => {
+                                t.classList.remove('active');
+                            });
+
+                            // Adiciona a classe 'active' ao Tab clicado
+                            tab.classList.add('active');
+                        });
+                    });
+                    // Navbar
+                        document.querySelector('.menu-toggle').addEventListener('click', () => {
+                            const menu = document.querySelector('.navbar ul');
+                            const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                            menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                            // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                            icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                            icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+                        });
+                        // Fechar o menu ao clicar em um link
+                        const links = document.querySelectorAll('.navbar ul li a');
+                        links.forEach(link => {
+                            link.addEventListener('click', () => {
+                                const menu = document.querySelector('.navbar ul');
+                                const icons = document.querySelectorAll('.menu-toggle i');
+
+                                // Fecha o menu ao clicar no link
+                                menu.classList.remove('show');
+                                icons[0].style.display = 'block'; // Exibe o ícone de menu
+                                icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                            });
+                        });
+                        // Captura o elemento navbar
+                        const navbar = document.querySelector('.navbar');
+
+                        // Função que altera a opacidade da navbar
+                        window.addEventListener('scroll', () => {
+                            if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                                navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                            } else {
+                                navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                            }
+                        });  
+    </script>
+</body>
+</html>
