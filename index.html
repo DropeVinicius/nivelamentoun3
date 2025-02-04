@@ -1462,6 +1462,35 @@
         padding: 8px; /* Ajusta o espaçamento interno */
     }
 }
+
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
         /* Conteúdo da Conclusão */
         .conclusao {
             display: flex;
@@ -1646,6 +1675,15 @@
             <li><a href="#secao1">Tópico 1</a></li>
             <li><a href="#secao2">Tópico 2</a></li>
             <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#secao5">Tópico 5</a></li>
+            <li><a href="#secao6">Tópico 6</a></li>
+            <li><a href="#secao7">Tópico 7</a></li>
+            <li><a href="#secao8">Tópico 8</a></li>
+            <li><a href="#secao9">Tópico 9</a></li>
+            <li><a href="#secao10">Tópico 10</a></li>
+            <li><a href="#secao11">Tópico 11</a></li>
+            <li><a href="#download">Download</a></li>
             <li><a href="#conclusao">Conclusão</a></li>
             <li><a href="#referencias">Refs Bibliográficas</a></li>
         </ul>
@@ -1946,7 +1984,7 @@
             </div>
         </section>
     </section>
-    <section id="secao3" class="secao1">
+    <section id="secao4" class="secao1">
         <h1>4. PONTO FINAL</h1>
         <p>Indica uma pausa mais longa da voz e encerra um período de sentido completo em tom descendente:</p>
         <div class="small-framev">
@@ -1958,7 +1996,7 @@
         </div>
         <p>É usado também em abreviaturas como, Etc. , LTDA. , Ou Ltda. ,CIA. , Cia. ou Sr.</p>
     </section>
-    <section id="secao2" class="secao2">
+    <section id="secao5" class="secao2">
         <h1>5. RETICÊNCIAS</h1>
         <p>As reticências são amplamente utilizadas na escrita para indicar interrupção, hesitação ou continuidade de
         um pensamento. Elas podem marcar elementos com forte carga emocional, como nos exemplos: <span class="fonte-menor">“Mara
@@ -2063,7 +2101,7 @@
                 </div>
             </div>
         </section>
-        <section id="secao3" class="secao1">
+        <section id="secao6" class="secao1">
             <h1>6. ASPAS</h1>
             <p>As aspas representam um sinal gráfico utilizado aos pares na produção textual. Sua principal função é
             destacar alguma parte de um texto, distinguindo-a do restante. Elas têm diversas aplicações.
@@ -2108,7 +2146,7 @@
                 </div>
                 <i class="bx bx-chevron-right arrow right-arrow"></i>
             </div>
-            <h1>7. TRAVESSÃO</h1>
+            <h1 id="secao7">7. TRAVESSÃO</h1>
             <p>O travessão é um traço maior que o hífen e emprega-se para:</p>
             <!-- Acordeons -->
             <div class="acordeon-container">
@@ -2153,7 +2191,7 @@
                     </ul>
                 </div>
         </section>
-        <section id="secao2" class="secao2">
+        <section id="secao8" class="secao2">
             <h1>8. PARÊNTESES</h1>
             <p>Os parênteses são sinais de pontuação que delineiam um momento intercalado no texto, onde há um
             acréscimo de informação. A informação pode ser retirada da frase, não havendo alteração de sentido.
@@ -2280,7 +2318,7 @@
                 </div>
             </div>
         </section>
-        <section id="secao3" class="secao1">
+        <section id="secao9" class="secao1">
             <h1>9. PONTO DE INTERROGAÇÃO</h1>
             <p>
                 O ponto de interrogação é um sinal de pontuação cuja função principal é indicar perguntas ou dúvidas,
@@ -2300,7 +2338,7 @@
                 Outro uso comum ocorre com aspas, quando uma pergunta é inserida em discurso direto. Veja o exemplo:<br>
                 <span class="fonte-menor">“O gerente do hotel perguntou: ‘Vocês preferem apartamentos com vista para a praia ou para a piscina?’”</span>
             </p>
-            <h1>10. PONTO DE EXCLAMAÇÃO</h1>
+            <h1 id="secao10">10. PONTO DE EXCLAMAÇÃO</h1>
             <p>
                 O ponto de exclamação é um sinal de pontuação empregado para expressar emoções intensas, como
                 surpresa, espanto, susto, indignação, piedade ou súplica. Ele é bastante versátil e pode ser utilizado em
@@ -2325,7 +2363,7 @@
             <p>
                 Além disso, o ponto de exclamação pode ser empregado para chamar a atenção de alguém, como
                 em: <span class="fonte-menor">“Margarida! Venha para casa. Está esfriando.”</span></p>
-            <h1>11. PONTO DE INTERROGAÇÃO E PONTO DE EXCLAMAÇÃO</h1>
+            <h1 id="secao11">11. PONTO DE INTERROGAÇÃO E PONTO DE EXCLAMAÇÃO</h1>
             <p>Quando uma frase é interrogativa e, ao mesmo tempo, expressa admiração ou espanto, utilizam-se o
             ponto de interrogação e o ponto de exclamação juntos. Nesse caso, o ponto de interrogação vem primeiro,
             seguido do ponto de exclamação.</p>
@@ -2429,6 +2467,11 @@
                     aprendeu? Experimente revisar textos, identificar o uso dos sinais de pontuação e aplicar as regras abordadas.
                     Assim, você estará aprimorando suas habilidades e fortalecendo sua comunicação escrita.</p>
                 </div>
+            </div>
+            <div id="download" class="download-section">
+                <a href="https://drive.google.com/uc?export=download&id=1frRV4YSmomHHPV1ZLb7afepqKPjSAE6P" class="download-btn">
+                    Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+                </a>
             </div>
         </section>
         <!-- Seção Referências-->
