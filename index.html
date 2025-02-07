@@ -399,7 +399,7 @@
             text-align: justify;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -428,7 +428,7 @@
         }
                             /* Acordeon styles */
         .acordeon-container {
-            margin-top: 20px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -538,7 +538,7 @@
                 border: 2px solid #9F43BE; /* Cor verde */
                 border-radius: 5px;
                 padding: 10px; /* Espaçamento interno reduzido */
-                margin-top: 20px; /* Espaçamento superior */
+                margin: 20px 20px; /* Espaçamento superior */
                 width: 60%; /* Largura menor para destacar como um quadro pequeno */
                 max-width: 500px; /* Largura máxima */
                 background-color: #FFF;
@@ -550,7 +550,7 @@
                 font-family: 'Roboto', sans-serif;
                 color: #000;
                 line-height: 1.6; /* Espaçamento entre linhas */
-                text-align: justify;
+                text-align: center;
                 
         }
 
@@ -618,7 +618,6 @@
             }
         }
 
-        /* Quadro com borda violeta */
         .quadrov {
             border: 2px solid #015A42; /* Borda violeta */
             border-radius: 10px; /* Bordas arredondadas */
@@ -635,7 +634,7 @@
             font-size: 18px;
             font-family: 'Roboto', sans-serif;
             color: #333; /* Verde */
-            margin-bottom: 5px;
+            margin: 20px 20px;
         }
         /* Contêiner para alinhar as imagens lado a lado */
         .imagem-container {
@@ -685,36 +684,53 @@
             line-height: 1.6;
         }
 
-        /* Estilo responsivo para o quadro */
-        @media (max-width: 768px) {
-            .quadrov {
-                padding: 15px;
-            }
-
-            .titulo-quadrov {
-                font-size: 20px;
-            }
-
-            .fonte-quadrov,
-            .descricao-quadrov {
-                font-size: 14px;
-            }
+            @media (max-width: 768px) {
+        .quadrov {
+            padding: 15px;
         }
 
-        @media (max-width: 480px) {
-            .quadrov {
-                padding: 10px;
-            }
-
-            .titulo-quadrov {
-                font-size: 18px;
-            }
-
-            .fonte-quadrov,
-            .descricao-quadrov {
-                font-size: 12px;
-            }
+        .titulo-quadrov {
+            font-size: 20px;
         }
+
+        .imagem-container {
+            flex-direction: column; /* Empilha as imagens em telas menores */
+            align-items: center; /* Centraliza as imagens */
+            gap: 15px; /* Mantém um espaçamento adequado */
+        }
+
+        .imagem-quadrov {
+            width: 90%; /* Imagens ocupam mais espaço sem ultrapassar os limites */
+        }
+
+        .fonte-quadrov,
+        .descricao-quadrov {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .quadrov {
+            padding: 10px;
+        }
+
+        .titulo-quadrov {
+            font-size: 18px;
+        }
+
+        .imagem-container {
+            gap: 10px; /* Reduz um pouco o espaço entre as imagens */
+        }
+
+        .imagem-quadrov {
+            width: 100%; /* Imagens ocupam toda a largura do quadro no mobile */
+        }
+
+        .fonte-quadrov,
+        .descricao-quadrov {
+            font-size: 13px;
+        }
+    }
             .separador {
                 margin: 0 40px; /* Espaço horizontal ao redor do hífen */
                 color: #333; /* Cor do hífen */
