@@ -562,7 +562,7 @@
             }
 
             .small-frame p {
-                font-size: 12px; /* Reduz o tamanho da fonte */
+                font-size: 14px; /* Reduz o tamanho da fonte */
             }
         }
 
@@ -572,7 +572,7 @@
             }
 
             .small-frame p {
-                font-size: 11px; /* Fonte ainda menor */
+                font-size: 13px; /* Fonte ainda menor */
             }
         }
         
@@ -944,27 +944,54 @@
             flex-direction: column;
         }
         /* Ajuste para responsividade */
-    @media (max-width: 768px) {
-        .slider-container {
-            width: 95%;
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+            }
+
+            .slide {
+                font-size: 16px;
+                padding: 25px 30px; /* Aumenta o espaço interno */
+                min-height: 150px; /* Garante que todos os slides tenham espaço suficiente */
+                overflow: hidden;
+            }
+
+            .arrow {
+                font-size: 30px;
+            }
+
+            .left-arrow {
+                left: -5px;
+            }
+
+            .right-arrow {
+                right: -5px;
+            }
         }
 
-        .slide {
-            font-size: 16px; /* Reduz o tamanho do texto */
-            padding: 30px 15px;
-        }
-    }
+        @media (max-width: 480px) {
+            .slider-container {
+                width: 100%;
+            }
 
-    @media (max-width: 480px) {
-        .slider-container {
-            width: 100%;
-        }
+            .slide {
+                font-size: 14px;
+                padding: 20px 35px; /* Mais espaço para texto */
+                min-height: 160px; /* Mais altura mínima */
+            }
 
-        .slide {
-            font-size: 14px;
-            padding: 20px;
+            .arrow {
+                font-size: 25px;
+            }
+
+            .left-arrow {
+                left: -8px;
+            }
+
+            .right-arrow {
+                right: -8px;
+            }
         }
-    }
         /* Setas */
         .arrow {
             position: absolute;
@@ -1877,7 +1904,7 @@
         <p><span class="text-red">Forma errada:</span> Todos os alunos, compareceram na conferência.</p>
         <p><strong><span class="text-green">Forma correta:</strong></span> Todos os alunos compareceram na conferência.</p>
     </div>
-    <p>Verifique também como a <strong>vírgula</strong> pode <strong>alterar</strong> o sentido da frase!!!</p><br>
+    <p>Verifique também como a <strong>vírgula</strong> pode <strong>alterar</strong> o sentido da frase!!!</p>
     <!-- Quadro com borda violeta -->
     <h2 class="titulo-quadrov"><span class="text-green">Figura 1.</span> Falta de vírgula... Que confusão!</h2><br>
     <div class="quadrov">
