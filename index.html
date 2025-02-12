@@ -125,10 +125,13 @@
             position: absolute;
             top: 60px;
             right: 0;
-            width: 200px;
-            height: auto;
+            width: 220px; /* Aumenta um pouco a largura */
+            max-height: 300px; /* Define um limite de altura */
+            overflow-y: auto; /* Adiciona scroll vertical se necessário */
             border-radius: 5px;
-            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+            z-index: 10;
+            scrollbar-width: thin; /* Estiliza a barra de rolagem (Firefox) */
+            scrollbar-color: #fff #9f43be; /* Personaliza a cor */
         }
 
         .navbar ul.show {
@@ -152,7 +155,19 @@
         .navbar .menu-toggle i:last-child {
             display: none; /* Esconde o ícone de fechar inicialmente */
         }
-        
+        /* Para Chrome, Edge e Safari */
+        .navbar ul::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .navbar ul::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .navbar ul::-webkit-scrollbar-track {
+            background-color: #9f43be;
+        }
 
          /* Navbar styles FIM */
 
